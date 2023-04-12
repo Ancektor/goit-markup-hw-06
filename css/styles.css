@@ -625,6 +625,12 @@ select {
     fill: var(--color-white);
     margin-left: 24px;
     padding: 8px 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.input-button:hover,
+.input-button:focus {
+    background-color: var(--color-iconfooter);
 }
 
 
@@ -669,22 +675,22 @@ select {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     cursor: pointer;
 }
-.svg-modal {
+.svg-modal-close {
     fill: var(--color-background-main);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-modal-close:active {
     background-color: var(--color-background-btn);    
 }
-.svg-modal:active{
+.svg-modal-close:active{
     fill: var(--color-white);
 }
 .button-modal-close:hover,
 .button-modal-close:focus {
     background-color: var(--color-background-btn);
 }
-.button-modal-close:hover .svg-modal,
-.button-modal-closel:focus .svg-modal {
+.button-modal-close:hover .svg-modal-close,
+.button-modal-close:focus .svg-modal-close {
     fill: var(--color-white);
 }
 
@@ -730,7 +736,7 @@ label {
     top: 8px;
     color: rgba(46, 47, 66, 0.4);
 }
-.fieldset {
+.checkbox {
     border: 0;
     margin: 16px 0px 24px;
     padding: 0;
