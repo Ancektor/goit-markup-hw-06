@@ -563,7 +563,6 @@ select {
    width: 40px;
    height: 40px;
 }
-
 .footer-link {
     width: 100%;
     height: 100%;
@@ -580,6 +579,49 @@ select {
 .footer-link:focus {
     background-color: var(--color-iconfooter);
 }
+.form-footer {
+    display: flex;
+    margin-left: 80px;
+}
+.label-footer {
+    margin-left: 80px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-white); 
+    margin-bottom: 16px; 
+}
+
+.input-footer {   
+    display: block;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    background-color: var(--color-background-main);
+}
+
+.input-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    background-color: var(--color-iris);
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+    fill: var(--color-white);
+    margin-left: 24px;
+    padding: 8px 24px;
+}
+
+
 
 /*---------------------------------MODAL-----------------------------*/
 .backdrop {
