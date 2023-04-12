@@ -352,13 +352,63 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="button-modal" data-modal-close type="button">
+            <button class="button-modal-close" data-modal-close type="button">
                 <svg class="svg-modal" width="8" height="8">
                     <use href="./images/close.svg#icon-close"></use>
                 </svg>
-                
 
             </button>
+            <p class="title-modal">Leave your contacts and we will call you back</p>
+            <form class="modal-form" action="">
+                <label for="name">Name</label>
+                <input 
+                    class="modal-input" 
+                    name="name" 
+                    type="text"
+                    id="name"
+                    placeholder="">
+                    <svg width="18" height="24">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
+                <label for="tel">Phone</label>                
+                <input 
+                    class="modal-input" 
+                    name="phone" 
+                    type="text"
+                    id="tel"
+                    placeholder="">
+                    <svg width="18" height="24">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                <label for="mail">Email</label>
+                <input 
+                    class="modal-input" 
+                    name="email" 
+                    type="text"
+                    id="mail"
+                    placeholder="">
+                    <svg width="18" height="24">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
+                <label for="comment">Comment</label>
+                <input 
+                    class="modal-input-comment" 
+                    name="text" 
+                    type="text"
+                    id="comment"
+                    placeholder="Text input">                
+                <div class="fieldset" role="group">
+                    <input type="checkbox" 
+                    name="checkbox"
+                    value="checkbox" 
+                    id="checkbox">
+                    <label for="checkbox">I accept the terms and conditions of the
+                        <a class="label-link" href="">Privacy Policy</a>
+                    </label>
+                </div>
+                <button class="btn-modal-submit" tupe="submit">Send
+                </button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>

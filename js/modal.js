@@ -11,4 +11,7 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
+  refs.modal.addEventListener("click", click => {
+        if(click.target === click.currentTarget) toggleModal();
+});
 })();

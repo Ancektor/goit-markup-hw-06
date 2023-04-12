@@ -15,6 +15,7 @@ body {
     color: var(--color-main);
     background-color: var(--color-white);
 }
+
 .link {
     text-decoration: none;
 }
@@ -24,6 +25,11 @@ body {
 p,h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0px;
+}
+input {
+    margin: 0;
+    padding: 0px;
+    border: 0px;
 }
 ul {
     margin: 0;
@@ -646,9 +652,12 @@ select {
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 0px 24px;
 }
-.button-modal {
+.button-modal-close {
     position: absolute;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -658,28 +667,113 @@ select {
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    top: 24px;
-    right: 24px;
     cursor: pointer;
 }
 .svg-modal {
     fill: var(--color-background-main);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-modal:active {
+.button-modal-close:active {
     background-color: var(--color-background-btn);    
 }
 .svg-modal:active{
     fill: var(--color-white);
 }
-.button-modal:hover,
-.button-modal:focus {
+.button-modal-close:hover,
+.button-modal-close:focus {
     background-color: var(--color-background-btn);
 }
-.button-modal:hover .svg-modal,
-.button-modal:focus .svg-modal {
+.button-modal-close:hover .svg-modal,
+.button-modal-closel:focus .svg-modal {
     fill: var(--color-white);
 }
+
+.modal-form {
+   
+}
+.title-modal {
+    margin-top: 72px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--color-background-main);
+}
+.modal-input {
+    width: 360px;
+    height: 40px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+}
+input:active {
+    border-color: var(--color-iris);
+}
+input:hover,
+input:focus {
+    border-color: var(--color-iris);
+}
+label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--color-costumers);
+}
+.modal-input-comment::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    top: 8px;
+    color: rgba(46, 47, 66, 0.4);
+}
+.fieldset {
+    border: 0;
+    margin: 16px 0px 24px;
+    padding: 0;
+}
+.label-link {
+
+}
+.modal-input-comment {
+    width: 360px;
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+}
+.btn-modal-submit {
+    margin: 24px ;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    background: var(--color-iris);
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    width:169px;
+    height: 56px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-modal-submit:hover,
+.btn-modal-submit:focus {
+    background-color: var(--color-background-btn);
+}
+
+
+
+
+
 .is-hidden {
     opacity: 0;
     visibility: hidden;
