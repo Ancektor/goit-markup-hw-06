@@ -695,7 +695,8 @@ select {
 }
 
 .modal-form {
-   
+   display: flex;
+   flex-direction: column;
 }
 .title-modal {
     margin-top: 72px;
@@ -744,11 +745,13 @@ label {
 .label-link {
 
 }
+
 .modal-input-comment {
     width: 360px;
     height: 120px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    resize: none;
 }
 .btn-modal-submit {
     margin: 24px ;
@@ -775,8 +778,6 @@ label {
 .btn-modal-submit:focus {
     background-color: var(--color-background-btn);
 }
-
-
 
 
 
