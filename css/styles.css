@@ -654,7 +654,7 @@ select {
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 408px;
-    min-height: 576px;
+    min-height: 584px;
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -695,9 +695,9 @@ select {
 }
 
 .modal-form {
-   display: flex;
-   flex-direction: column;
-}
+    position: relative;
+
+}   
 .title-modal {
     margin-top: 72px;
     margin-bottom: 16px;
@@ -707,27 +707,44 @@ select {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--color-background-main);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-field {
 }
 .modal-input {
-    width: 360px;
-    height: 40px;
-    margin-bottom: 8px;
+    width: 100%; 
+    height: 40px;   
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    padding: 8px 16px 8px 35px;
+    outline: transparent;
 }
-input:active {
+.modal-input:focus,
+.modal-input-comment:focus {
     border-color: var(--color-iris);
 }
-input:hover,
-input:focus {
-    border-color: var(--color-iris);
+.modal-input:focus + .svg-modal {
+    fill: var(--color-iris);
 }
 label {
+    display: flex;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--color-costumers);
+    margin: 8px 0px 4px 0px;
+    
+}
+.input-wrap {
+    position: relative;
+}
+.svg-modal {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input-comment::placeholder {
     font-weight: 400;
@@ -738,12 +755,21 @@ label {
     color: rgba(46, 47, 66, 0.4);
 }
 .checkbox {
-    border: 0;
-    margin: 16px 0px 24px;
-    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.checked {
+}
+.checkbox-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    margin-left: 8px;
 }
 .label-link {
-
+   color: var(--color-iris);
 }
 
 .modal-input-comment {
@@ -752,9 +778,16 @@ label {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     resize: none;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    outline: transparent;
 }
 .btn-modal-submit {
-    margin: 24px ;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 24px 0px;
+    width: 169px;
     justify-content: center;
     font-weight: 500;
     font-size: 16px;
@@ -769,8 +802,6 @@ label {
     box-shadow: none;
     border-radius: 4px;
     padding: 16px 32px;
-    width:169px;
-    height: 56px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
