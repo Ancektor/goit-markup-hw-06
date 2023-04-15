@@ -392,10 +392,16 @@
                     rows="10" 
                     placeholder="Text input"></textarea>
                 <div class="checkbox">
-                    <input class="checked" type="checkbox" name="checkbox" value="checkbox" id="checkbox">
-                    <p class="checkbox-text">I accept the terms and conditions of the
+                    <input class="hidden" type="checkbox" name="checkbox" value="tru" id="checkbox">
+                    <label for="checkbox" class="checkbox-text">
+                        <span class="">
+                            <svg class="checked" width="10" height="8">
+                                <use href="./images/icons.svg#icon-vector"></use>
+                            </svg>
+                        </span>
+                        I accept the terms and conditions of the
                         <a class="label-link" href="">Privacy Policy</a>
-                    </p>
+                    </label>
                 </div>
                  <button class="btn-modal-submit" tupe="submit">Send
                 </button>
